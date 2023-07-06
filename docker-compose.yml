@@ -1,0 +1,10 @@
+version: '3'
+services:
+  source:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./iot-device-simulator:/app/iot-device-simulator
+    env_file:
+      - .env
